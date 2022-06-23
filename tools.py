@@ -127,7 +127,7 @@ def walk_svd_files(svd_dir: Union[str, pathlib.Path]) -> Iterable[SvdMeta]:
     for svd_file in svd_dir.iterdir():
         if svd_file.suffix.endswith("svd"):
             yield SvdMeta(
-                name=re.sub(r"f\d+$", "", svd_file.stem.lower()),
+                name=re.sub(r"f\d+.*$", "", svd_file.stem.lower()),
                 path=svd_file.resolve(),
             )
 
