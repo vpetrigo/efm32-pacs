@@ -19,7 +19,7 @@ jobs:
           components: rustfmt
       - name: Build Crates
         run: |
-          find . -type f -name "Cargo.toml" -execdir cargo test && cargo clean \;
+          find . -type f -name "Cargo.toml" -execdir cargo test \; -execdir cargo clean \;
         env:
           RUSTFLAGS: --deny warnings
 
