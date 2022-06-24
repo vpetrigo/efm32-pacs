@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v2
@@ -20,7 +19,7 @@ jobs:
           components: rustfmt
       - name: Build Crates
         run: |
-          find . -type f -name "Cargo.toml" -execdir cargo test \;
+          find . -type f -name "Cargo.toml" -execdir cargo test && cargo clean \;
         env:
           RUSTFLAGS: --deny warnings
 
