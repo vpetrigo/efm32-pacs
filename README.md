@@ -1,5 +1,7 @@
 # EFM32 support for Rust
 
+[![PACs](https://github.com/vpetrigo/efm32-pacs/actions/workflows/pacs.yml/badge.svg)](https://github.com/vpetrigo/efm32-pacs/actions/workflows/pacs.yml)
+
 This repository contains Peripheral Access Crates (PACs) for Silabs' EFM32 series of Cortex-M microcontrollers.
 
 All these crates are automatically generated using [svd2rust](https://github.com/rust-embedded/svd2rust).
